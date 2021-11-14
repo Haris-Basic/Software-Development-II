@@ -7,23 +7,12 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public class KorisniciService : IKorisniciService
+    public class KorisniciService : BaseReadService<Models.Korisnici,Database.Korisnici,Models.KorisniciSearchObject>, IKorisniciService
     {
-        private eProdajaContext _db;
-        protected readonly IMapper _mapper;
-        public KorisniciService(eProdajaContext db, IMapper mapper)
+        
+        public KorisniciService(eProdajaContext db, IMapper mapper) : base(db,mapper)
         {
-            _db = db;
-            _mapper = mapper;
         }
-        public IEnumerable<Models.Korisnici> Get()
-        {
-            return _db.Korisnicis.ToList().Select(s => _mapper.Map<Models.Korisnici>(s)).ToList();
-        }
-
-        //public Models.Korisnici GetById(int id)
-        //{
-        //    return _db.Korisnicis.FirstOrDefault(x => x.KorisnikId == id);
-        //}
+       
     }
 }

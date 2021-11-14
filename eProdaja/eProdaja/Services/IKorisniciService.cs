@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace eProdaja.Services
 {
-    public interface IKorisniciService
+    public interface IKorisniciService : IReadService<Models.Korisnici,Models.KorisniciSearchObject>
     {
-        public IEnumerable<Models.Korisnici> Get();
-
-        //public Models.Korisnici GetById(int id);
+        
     }
 }

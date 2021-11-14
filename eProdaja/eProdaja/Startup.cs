@@ -42,6 +42,9 @@ namespace eProdaja
             services.AddAutoMapper(typeof(Startup));
              
             services.AddScoped<IKorisniciService, KorisniciService>();
+            services.AddScoped<IJediniceMjereService, JediniceMjereService>();
+            services.AddScoped<IProizvodiService, ProizvodiService>();
+            services.AddScoped<IVrsteProizvodumService, VrsteProizvodumService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
