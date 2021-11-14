@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace eProdaja.Models
+namespace eProdaja.Models.Requests
 {
-    public class Korisnici
+    public class KorisniciUpsertRequest
     {
         public int KorisnikId { get; set; }
         public string Ime { get; set; }
@@ -12,8 +12,8 @@ namespace eProdaja.Models
         public string Email { get; set; }
         public string Telefon { get; set; }
         public string KorisnickoIme { get; set; }
+        public string LozinkaHash { get; set; }
+        public string LozinkaSalt { get; set; }
         public bool? Status { get; set; }
-
-        //public virtual ICollection<KorisniciUloge> KorisniciUloges { get; set; }
     }
 }

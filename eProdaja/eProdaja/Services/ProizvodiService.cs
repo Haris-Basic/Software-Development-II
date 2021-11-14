@@ -36,13 +36,6 @@ namespace eProdaja.Services
             {
                 entity = entity.Where(w => w.JedinicaMjereId == search.JedinicaMjereId);
             }
-            //if(search?.IncludeList.Length > 0)
-            //{
-            //    foreach (var item in search.IncludeList)
-            //    {
-            //        entity = entity.Include(item);
-            //    }
-            //}
 
             var list = entity.ToList();
 
